@@ -1,0 +1,19 @@
+# your data, never committed
+Input/*
+!Input/.gitkeep
+Output/*
+!Output/.gitkeep
+logs/*
+!logs/.gitkeep
+.env
+
+# python / latex build junk
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+*.synctex.gz
+main.pdf
+coverletter.pdf
+~$*.xlsx

@@ -1,0 +1,137 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+% Bhanu Prakash Bathini — INTERN / ENTRY-LEVEL base resume (SAMPLE — replace with yours, 1 page, pdflatex)
+% The pipeline (engine/build_engine.py) turns this into a slot template. Keep the macros and
+% section shape; edit content freely, then re-run:  python engineuild_engine.py
+% 'City,St' below is the slot the pipeline fills with the job's City, ST.
+%------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[topsep=1pt,itemsep=0pt,parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Bhanu Prakash Bathini} \\ \vspace{2pt}
+    \small {{CITY_ST}} $|$ (000) 000-0000 $|$
+    \href{mailto:your.email@example.com}{\underline{your.email@example.com}} $|$    \href{https://your-portfolio.example.com}{\underline{Portfolio}} $|$
+    \href{https://github.com/your-github}{\underline{GitHub}} $|$
+    \href{https://huggingface.co/your-handle}{\underline{Hugging Face}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Northwest Missouri State University}{Maryville, MO}
+      {Master of Science in Applied Computer Science}{Aug. 2023 -- Dec. 2024}
+      \resumeItemListStart
+        \resumeItem{Coursework: {{COURSEWORK}}}
+        \resumeItem{Certification: Claude Certified Architect (CCA) --- Foundations, Anthropic (2026)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+{{EXPERIENCE}}\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+{{PROJECTS}}\resumeSubHeadingListEnd
+
+%-----------RESEARCH / SERVICE-----------
+\section{Research, Publications \& Volunteer}
+ \begin{itemize}[leftmargin=0.15in, label={}, topsep=1pt]
+    \small{\item{
+     \textbf{Peer review}{: ACM RecSys; ISCA CATA (Springer) --- reviews on method, evaluation, and clarity.} \\
+     \textbf{Research}{: Document layout detection and grounded Q\&A (ParseDoc.ai); Hugging Face \texttt{dataset\_parsecdoc.ai}.} \\
+     \textbf{Volunteer}{: Leo Club charitable member --- community service, fundraising, and local outreach.}
+    }}
+ \end{itemize}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+{{SKILLS}}
+    }}
+ \end{itemize}
+
+\end{document}

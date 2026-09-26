@@ -1,0 +1,94 @@
+{
+ "name": "Bhanu Prakash Bathini",
+ "education": {
+  "school": "Northwest Missouri State University",
+  "location": "Maryville, MO",
+  "degree": "Master of Science in Applied Computer Science",
+  "dates": "Aug. 2023 – Dec. 2024"
+ },
+ "coursework": [
+  "Machine Learning",
+  "Data Mining",
+  "Cloud Computing",
+  "Database Systems",
+  "Software Engineering"
+ ],
+ "skills": [
+  {
+   "category": "Languages",
+   "items": "Python, SQL, JavaScript"
+  },
+  {
+   "category": "AI / ML",
+   "items": "PyTorch, TensorFlow, scikit-learn, BERT fine-tuning, prompt engineering, RAG, evaluation (precision/recall, groundedness)"
+  },
+  {
+   "category": "Agents & Automation",
+   "items": "n8n, Make.com, Retell AI, GitHub Copilot, Cursor, Claude, workflow orchestration"
+  },
+  {
+   "category": "Data & Integration",
+   "items": "Pandas, NumPy, APIs, FastAPI, SQL joins, data pipelines, document extraction"
+  },
+  {
+   "category": "Cloud & Serving",
+   "items": "Azure AI Foundry, Azure AI Search, Docker, GitHub Actions, AWS EC2/S3"
+  },
+  {
+   "category": "Quality & Security",
+   "items": "MLflow, trace-based debugging, secure data handling, workflow documentation"
+  }
+ ],
+ "experience": [
+  {
+   "company": "Mondee",
+   "location": "Fremont, CA",
+   "role": "AI/ML Engineer",
+   "dates": "Jan. 2023 – Aug. 2026",
+   "_head": "{Mondee}{Fremont, CA}\n      {AI/ML Engineer}{Jan. 2023 -- Aug. 2026}",
+   "bullets": [
+    "Design and maintain AI agents and automation workflows that connect models to FastAPI services and cloud endpoints used by product and operations teams.",
+    "Built grounded document Q&A on Azure AI Search and GPT-4o; traces split retrieval vs. generation errors and cut hallucination escalations by 40%.",
+    "Raised groundedness scores by 35% by pinning source passages, tightening prompts, and logging failure modes for reviewers.",
+    "Trained routing and classification models in PyTorch and scikit-learn; lifted routing accuracy by 18% and reported precision, recall, and error cases each sprint.",
+    "Used Copilot and Cursor to scaffold flows from natural-language specs (~25% faster prototypes) and wrote Azure AI notes reused in onboarding."
+   ]
+  },
+  {
+   "company": "Cosmic Reality",
+   "location": "Missouri, USA",
+   "role": "AI/ML Engineer",
+   "dates": "Apr. 2020 – Oct. 2022",
+   "_head": "{Cosmic Reality}{Missouri, USA}\n      {AI/ML Engineer}{Apr. 2020 -- Oct. 2022}",
+   "bullets": [
+    "Built PDF-to-structured-data pipelines in Python (PDFMiner, PyPDF2) so malformed layouts across thousands of pages became consistent tables for models.",
+    "Trained sentiment and spam classifiers with NLTK and scikit-learn; recovered ~12% accuracy after class-imbalance and feature fixes.",
+    "Developed classification and time-series models in PyTorch and TensorFlow; logged BERT labeling runs in MLflow for replayable experiments.",
+    "Packaged scoring apps with Docker on AWS EC2/S3 and documented setup, shortening local-to-demo handoff by about 40%."
+   ]
+  }
+ ],
+ "projects": [
+  {
+   "name": "ParseDoc.ai",
+   "tech": "Python, PyTorch, Azure, Hugging Face, n8n",
+   "dates": "2024 – 2026",
+   "_head": "{\\textbf{ParseDoc.ai} $|$ \\emph{Python, PyTorch, Azure, Hugging Face, n8n}}{2024 -- 2026}",
+   "bullets": [
+    "Extracted layout and text from long PDFs and trained detectors so agents and search indexes receive structured fields instead of raw page dumps.",
+    "Generated labeled synthetic pages and improved bounding-box recovery by ~15%; published pipelines on Hugging Face (dataset_parsecdoc.ai) and GitHub.",
+    "Wired extraction into n8n workflows and Azure Search so document Q&A stays grounded in source text with auditable traces."
+   ]
+  },
+  {
+   "name": "Agentic Workflow & Eval Harness",
+   "tech": "Python, FastAPI, MLflow, n8n, Make.com, Retell AI",
+   "dates": "2023 – 2026",
+   "_head": "{\\textbf{Agentic Workflow \\& Eval Harness} $|$ \\emph{Python, FastAPI, MLflow, n8n, Make.com, Retell AI}}{2023 -- 2026}",
+   "bullets": [
+    "Built multi-step agents that call APIs, score outputs, and retry failed steps; logged metrics in MLflow so reviewers can compare runs.",
+    "Prototyped voice and workflow automations (n8n, Make.com, Retell AI) with prompt-engineering guardrails for tool-to-human handoff."
+   ]
+  }
+ ]
+}

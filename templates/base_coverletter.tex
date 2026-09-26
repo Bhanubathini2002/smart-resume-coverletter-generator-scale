@@ -1,0 +1,97 @@
+%------------------------------------------------------------------------------
+% Cover Letter — Bhanu Prakash Bathini  (INTERN / ENTRY-LEVEL base template)
+% One page, letterpaper, pdflatex. Layout = the user's coverletter.tex (SAMPLE — replace with yours); the addressee block and body are tokenized.
+%
+% HOW THE PIPELINE USES THIS FILE
+%   render.py replaces only the <<TOKENS>> below and the four BODY paragraphs between
+%   the P1-OPENING ... P4-CLOSE comment markers. Keep those markers, the \cl* tokens
+%   and the "Sincerely" block exactly; change anything else freely.
+%   build_engine.py reads the four body paragraphs as the TRUE filler used when the
+%   model writes a paragraph that is too short — so keep them generic (no company
+%   names) and factual (only what the resume says).
+%------------------------------------------------------------------------------
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.72in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{parskip}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black
+}
+
+\setlength{\parskip}{0.55em}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% -----------------------------------------------------------------------------
+% TOKENS -- render.py replaces the values on the right. No underscores inside tokens.
+% -----------------------------------------------------------------------------
+\newcommand{\clDate}{<<DATE>>}
+\newcommand{\clHiringManager}{<<HIRING MANAGER>>}
+\newcommand{\clCompany}{<<COMPANY NAME>>}
+\newcommand{\clCompanyAddr}{<<COMPANY CITY, STATE>>}
+\newcommand{\clJobTitle}{<<JOB TITLE>>}
+\newcommand{\clHowFound}{<<HOW FOUND>>}
+
+\begin{document}
+
+% ============================ HEADER (do not edit) ===========================
+\begin{minipage}[t]{0.62\textwidth}
+  {\large\bfseries Bhanu Prakash Bathini}\\[2pt]
+  {\small \clCompanyAddr\ \textbullet\ (000) 000-0000}\\
+  {\small \href{mailto:your.email@example.com}{your.email@example.com}}\\
+  {\small \href{https://your-portfolio.example.com}{Portfolio}
+    \textbullet\
+    \href{https://github.com/your-github}{GitHub}
+    \textbullet\
+    \href{https://huggingface.co/your-handle}{Hugging Face}}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.34\textwidth}
+  \raggedleft
+  {\small \clDate}
+\end{minipage}
+
+% ============================ LETTER META ====================================
+\vspace{0.85em}
+{\small
+\clHiringManager\\
+\clCompany\\
+\clCompanyAddr
+}
+
+\vspace{0.35em}
+{\small\textbf{Re:} \clJobTitle}
+
+\vspace{0.15em}
+Dear \clHiringManager,
+
+% ============================ BODY -- render.py rewrites these four blocks ====
+
+% P1 OPENING  (45-70 words)
+% Exact role title + company + how found + degree + one-line fit.
+I am applying for the \clJobTitle{} role at \clCompany{}, which I found through \clHowFound. I hold an M.S. in Applied Computer Science from Northwest Missouri State University and have hands-on experience building, integrating, and documenting AI agents, document Q\&A systems, and machine learning models that sit on top of existing services. I would like to bring that work to your team and keep learning from engineers who ship production systems.
+
+% P2 PROOF  (70-115 words)
+% Map the 2-3 strongest JD requirements to resume proof; real numbers only.
+At Mondee I built grounded document question-answering on Azure AI Search and GPT-4o, then split retrieval errors from generation errors so reviewers could see where an answer failed; that tracing cut hallucination escalations by about 40 percent and raised groundedness scores by 35 percent. I also trained routing and classification models in PyTorch and scikit-learn, lifted routing accuracy by 18 percent, and reported precision, recall, and error cases each sprint so the next change was based on evidence rather than guesswork.
+
+% P3 FIT  (55-105 words)
+% Echo JD language for stack and working style; show how you learn and collaborate.
+On ParseDoc.ai I extract layout and fields from long PDFs so downstream agents and search indexes receive structured records instead of raw page dumps, then wire those pipelines into n8n and Azure Search with auditable traces. I have packaged scoring services with Docker on AWS, written setup notes that shortened local-to-demo handoff, and used Copilot and Cursor to turn natural-language specs into first-pass flows. I treat documentation, testing, and secure data handling as part of the build, and I work well with non-engineering stakeholders.
+
+% P4 CLOSE  (35-70 words)
+% One concrete, non-generic sentence about the company / team, then the ask.
+I would welcome the chance to contribute to your team, learn its production practices, and grow with \clCompany. I can start on your timeline and am happy to walk through any of the projects above. Thank you for your time; I look forward to speaking with the team.
+
+\vspace{0.7em}
+Sincerely,\\[0.35em]
+{\bfseries Bhanu Prakash Bathini}\\
+{\small (000) 000-0000 \textbullet\ \href{mailto:your.email@example.com}{your.email@example.com}}
+
+\end{document}
