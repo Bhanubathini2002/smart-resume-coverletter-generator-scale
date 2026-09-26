@@ -1,0 +1,93 @@
+%------------------------------------------------------------------------------
+% Cover Letter — Bhanu Prakash Bathini  (INTERN / ENTRY-LEVEL base template)
+% One page, letterpaper, pdflatex. Layout = the user's coverletter.tex (SAMPLE — replace with yours); the addressee block and body are tokenized.
+%
+% HOW THE PIPELINE USES THIS FILE
+%   render.py replaces only the <<TOKENS>> below and the four BODY paragraphs between
+%   the P1-OPENING ... P4-CLOSE comment markers. Keep those markers, the \cl* tokens
+%   and the "Sincerely" block exactly; change anything else freely.
+%   build_engine.py reads the four body paragraphs as the TRUE filler used when the
+%   model writes a paragraph that is too short — so keep them generic (no company
+%   names) and factual (only what the resume says).
+%------------------------------------------------------------------------------
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.72in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{parskip}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black
+}
+
+\setlength{\parskip}{0.55em}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% -----------------------------------------------------------------------------
+% TOKENS -- render.py replaces the values on the right. No underscores inside tokens.
+% -----------------------------------------------------------------------------
+\newcommand{\clDate}{September 26, 2026}
+\newcommand{\clHiringManager}{Hiring Manager}
+\newcommand{\clCompany}{DiligenceVault}
+\newcommand{\clCompanyAddr}{New York, NY}
+\newcommand{\clJobTitle}{AI Engineer Intern}
+\newcommand{\clHowFound}{Jobright}
+
+\begin{document}
+
+% ============================ HEADER (do not edit) ===========================
+\begin{minipage}[t]{0.62\textwidth}
+  {\large\bfseries Bhanu Prakash Bathini}\\[2pt]
+  {\small \clCompanyAddr\ \textbullet\ (000) 000-0000}\\
+  {\small \href{mailto:your.email@example.com}{your.email@example.com}}\\
+  {\small \href{https://your-portfolio.example.com}{Portfolio}
+    \textbullet\
+    \href{https://github.com/your-github}{GitHub}
+    \textbullet\
+    \href{https://huggingface.co/your-handle}{Hugging Face}}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.34\textwidth}
+  \raggedleft
+  {\small \clDate}
+\end{minipage}
+
+% ============================ LETTER META ====================================
+\vspace{0.85em}
+{\small
+\clHiringManager\\
+\clCompany\\
+\clCompanyAddr
+}
+
+\vspace{0.35em}
+{\small\textbf{Re:} \clJobTitle}
+
+\vspace{0.15em}
+Dear \clHiringManager,
+
+% ============================ BODY -- render.py rewrites these four blocks ====
+
+% P1 OPENING
+I am applying for the AI Engineer Intern position at DiligenceVault, found through Jobright. I hold a Master of Science in Applied Computer Science from Northwest Missouri State University and have built RAG systems, document intelligence pipelines, and AI agents that solve messy data problems in production environments.
+
+% P2 PROOF
+At Mondee I built grounded document Q\&A on Azure AI Search and GPT-4o, cutting hallucination escalations by 40\% and raising groundedness scores by 35\% through source pinning and prompt refinement. In my ParseDoc.ai project I extracted layout and text from long PDFs, trained detectors for structured output, and improved bounding-box recovery by $\sim$15\%. My Agentic Workflow project prototyped multi-step agents with tool calls, evaluation harnesses in MLflow, and workflow automations using n8n and Make.com, directly matching your RAG, semantic search, and AI agent requirements.
+
+% P3 FIT
+I work in Python with PyTorch, scikit-learn, BERT fine-tuning, and embeddings daily. I build evaluation frameworks that track precision, recall, and groundedness, log experiments in MLflow, and document setups so reviewers and teammates can reproduce results. I am comfortable with messy real-world data, having parsed thousands of malformed PDFs and recovered $\sim$12\% accuracy through class-imbalance fixes. I prototype rapidly, test ideas, and iterate based on feedback.
+
+% P4 CLOSE
+DiligenceVault's AI-powered diligence and decision intelligence platform sits at the intersection of investment research and modern AI, a domain I am eager to explore. I am available for part-time hybrid work and would welcome the opportunity to discuss how I can contribute. Thank you for your consideration.
+
+\vspace{0.7em}
+Sincerely,\\[0.35em]
+{\bfseries Bhanu Prakash Bathini}\\
+{\small (000) 000-0000 \textbullet\ \href{mailto:your.email@example.com}{your.email@example.com}}
+
+\end{document}

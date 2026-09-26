@@ -1,0 +1,176 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+% Bhanu Prakash Bathini — INTERN / ENTRY-LEVEL base resume (SAMPLE — replace with yours, 1 page, pdflatex)
+% The pipeline (engine/build_engine.py) turns this into a slot template. Keep the macros and
+% section shape; edit content freely, then re-run:  python engineuild_engine.py
+% 'City,St' below is the slot the pipeline fills with the job's City, ST.
+%------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[topsep=1pt,itemsep=0pt,parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Bhanu Prakash Bathini} \\ \vspace{2pt}
+    \small Los Angeles, CA $|$ (000) 000-0000 $|$
+    \href{mailto:your.email@example.com}{\underline{your.email@example.com}} $|$    \href{https://your-portfolio.example.com}{\underline{Portfolio}} $|$
+    \href{https://github.com/your-github}{\underline{GitHub}} $|$
+    \href{https://huggingface.co/your-handle}{\underline{Hugging Face}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Northwest Missouri State University}{Maryville, MO}
+      {Master of Science in Applied Computer Science}{Aug. 2023 -- Dec. 2024}
+      \resumeItemListStart
+        \resumeItem{Coursework: Software Engineering, Database Systems, Cloud Computing, Data Mining, Machine Learning}
+        \resumeItem{Certification: Claude Certified Architect (CCA) --- Foundations, Anthropic (2026)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Mondee}{Fremont, CA}
+      {AI/ML Engineer}{Jan. 2023 -- Aug. 2026}
+      \resumeItemListStart
+        \resumeItem{Built internal automation workflows connecting FastAPI backend services to cloud endpoints used by product and operations teams.}
+        \resumeItem{Developed document Q\&A API on Azure AI Search and GPT-4o with trace-based debugging that reduced hallucination escalations by 40\%.}
+        \resumeItem{Improved data quality scores by 35\% through prompt refinement, source passage logging, and failure mode documentation for reviewers.}
+        \resumeItem{Trained routing and classification models in PyTorch and scikit-learn; increased routing accuracy by 18\% with precision and recall reporting.}
+        \resumeItem{Used Copilot and Cursor to prototype backend services from specifications $\sim$25\% faster and documented workflows for team onboarding.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Cosmic Reality}{Missouri, USA}
+      {AI/ML Engineer}{Apr. 2020 -- Oct. 2022}
+      \resumeItemListStart
+        \resumeItem{Built Python data pipelines with PDFMiner and PyPDF2 that parsed thousands of malformed PDFs into structured tables for downstream systems.}
+        \resumeItem{Developed classification models with scikit-learn and NLTK; improved accuracy by $\sim$12\% after addressing class imbalance and feature engineering.}
+        \resumeItem{Trained PyTorch and TensorFlow models with MLflow experiment tracking to enable reproducible model evaluation and deployment workflows.}
+        \resumeItem{Packaged services with Docker on AWS EC2/S3 and documented deployment steps, reducing handoff time by approximately 40\%.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Agentic Workflow \& Eval Harness} $|$ \emph{Python, FastAPI, MLflow, n8n, Make.com, Retell AI}}{2023 -- 2026}
+          \resumeItemListStart
+        \resumeItem{Built multi-step backend agents with FastAPI that call APIs, evaluate outputs, and retry failed steps with logged metrics in MLflow.}
+        \resumeItem{Prototyped workflow automation systems using n8n and Make.com with prompt-engineering guardrails for tool-to-human handoff visibility.}
+        \resumeItem{Implemented evaluation harness tracking precision, recall, and failure cases to improve agent reliability across production workflows.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{ParseDoc.ai} $|$ \emph{Python, PyTorch, Azure, Hugging Face, n8n}}{2024 -- 2026}
+          \resumeItemListStart
+        \resumeItem{Developed Python data pipeline extracting layout and text from PDFs so backend services receive structured fields instead of raw pages.}
+        \resumeItem{Trained PyTorch detectors on synthetic labeled data and improved bounding-box recovery by $\sim$15\%; published datasets on Hugging Face and GitHub.}
+        \resumeItem{Integrated extraction API with n8n workflows and Azure Search to enable grounded document Q\&A with auditable source traces.}
+          \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------RESEARCH / SERVICE-----------
+\section{Research, Publications \& Volunteer}
+ \begin{itemize}[leftmargin=0.15in, label={}, topsep=1pt]
+    \small{\item{
+     \textbf{Peer review}{: ACM RecSys; ISCA CATA (Springer) --- reviews on method, evaluation, and clarity.} \\
+     \textbf{Research}{: Document layout detection and grounded Q\&A (ParseDoc.ai); Hugging Face \texttt{dataset\_parsecdoc.ai}.} \\
+     \textbf{Volunteer}{: Leo Club charitable member --- community service, fundraising, and local outreach.}
+    }}
+ \end{itemize}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, JavaScript, SQL} \\
+     \textbf{Backend \& Data}{: FastAPI, APIs, Pandas, NumPy, data pipelines, SQL joins} \\
+     \textbf{Cloud \& DevOps}{: Docker, GitHub Actions, Azure AI Foundry, AWS EC2/S3} \\
+     \textbf{Automation \& Tools}{: n8n, Make.com, workflow orchestration, GitHub Copilot, Cursor} \\
+     \textbf{AI / ML}{: PyTorch, scikit-learn, TensorFlow, MLflow, RAG}
+
+    }}
+ \end{itemize}
+
+\end{document}

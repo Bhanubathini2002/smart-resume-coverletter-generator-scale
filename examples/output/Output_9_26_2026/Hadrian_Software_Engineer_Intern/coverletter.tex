@@ -1,0 +1,93 @@
+%------------------------------------------------------------------------------
+% Cover Letter — Bhanu Prakash Bathini  (INTERN / ENTRY-LEVEL base template)
+% One page, letterpaper, pdflatex. Layout = the user's coverletter.tex (SAMPLE — replace with yours); the addressee block and body are tokenized.
+%
+% HOW THE PIPELINE USES THIS FILE
+%   render.py replaces only the <<TOKENS>> below and the four BODY paragraphs between
+%   the P1-OPENING ... P4-CLOSE comment markers. Keep those markers, the \cl* tokens
+%   and the "Sincerely" block exactly; change anything else freely.
+%   build_engine.py reads the four body paragraphs as the TRUE filler used when the
+%   model writes a paragraph that is too short — so keep them generic (no company
+%   names) and factual (only what the resume says).
+%------------------------------------------------------------------------------
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.72in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{parskip}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black
+}
+
+\setlength{\parskip}{0.55em}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% -----------------------------------------------------------------------------
+% TOKENS -- render.py replaces the values on the right. No underscores inside tokens.
+% -----------------------------------------------------------------------------
+\newcommand{\clDate}{September 26, 2026}
+\newcommand{\clHiringManager}{Hiring Manager}
+\newcommand{\clCompany}{Hadrian}
+\newcommand{\clCompanyAddr}{Los Angeles, CA}
+\newcommand{\clJobTitle}{Software Engineer Intern}
+\newcommand{\clHowFound}{Jobright}
+
+\begin{document}
+
+% ============================ HEADER (do not edit) ===========================
+\begin{minipage}[t]{0.62\textwidth}
+  {\large\bfseries Bhanu Prakash Bathini}\\[2pt]
+  {\small \clCompanyAddr\ \textbullet\ (000) 000-0000}\\
+  {\small \href{mailto:your.email@example.com}{your.email@example.com}}\\
+  {\small \href{https://your-portfolio.example.com}{Portfolio}
+    \textbullet\
+    \href{https://github.com/your-github}{GitHub}
+    \textbullet\
+    \href{https://huggingface.co/your-handle}{Hugging Face}}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.34\textwidth}
+  \raggedleft
+  {\small \clDate}
+\end{minipage}
+
+% ============================ LETTER META ====================================
+\vspace{0.85em}
+{\small
+\clHiringManager\\
+\clCompany\\
+\clCompanyAddr
+}
+
+\vspace{0.35em}
+{\small\textbf{Re:} \clJobTitle}
+
+\vspace{0.15em}
+Dear \clHiringManager,
+
+% ============================ BODY -- render.py rewrites these four blocks ====
+
+% P1 OPENING
+I am applying for the Software Engineer Intern position at Hadrian, found through Jobright. I hold a Master of Science in Applied Computer Science from Northwest Missouri State University and have built backend services, APIs, and data pipelines that connect AI models to production workflows used by operations and product teams.
+
+% P2 PROOF
+At Mondee I designed and maintained AI agents and automation workflows that connect models to FastAPI services and cloud endpoints used by product and operations teams. I built grounded document Q\&A on Azure AI Search and GPT-4o, cutting hallucination escalations by 40\% and raising groundedness scores by 35\%. At Cosmic Reality I developed PDF-to-structured-data pipelines in Python so malformed layouts became consistent tables, and packaged scoring apps with Docker on AWS EC2/S3, shortening local-to-demo handoff by about 40\%. My ParseDoc.ai project extracted layout and text from long PDFs and improved bounding-box recovery by $\sim$15\%, delivering structured fields to downstream systems.
+
+% P3 FIT
+I am proficient in Python, TypeScript, and JavaScript, with strong backend development experience building APIs, data pipelines, and internal dashboards. I write clean, well-tested code, log evaluation metrics for precision and recall, document setup steps, and participate in code reviews each sprint. I surface technical risks during architectural discussions and thrive in fast-moving, highly ambiguous environments. I am excited about manufacturing, aerospace, and industrial systems and comfortable working on-site.
+
+% P4 CLOSE
+Hadrian's mission to build autonomous factories by combining AI, advanced software, and robotics for aerospace and defense is inspiring. I am available for the Summer 2027 cohort and would welcome the opportunity to discuss how I can contribute to your production software and factory operations tools. Thank you for your consideration.
+
+\vspace{0.7em}
+Sincerely,\\[0.35em]
+{\bfseries Bhanu Prakash Bathini}\\
+{\small (000) 000-0000 \textbullet\ \href{mailto:your.email@example.com}{your.email@example.com}}
+
+\end{document}

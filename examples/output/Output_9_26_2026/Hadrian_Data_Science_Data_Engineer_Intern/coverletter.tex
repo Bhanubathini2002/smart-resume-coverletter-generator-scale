@@ -1,0 +1,93 @@
+%------------------------------------------------------------------------------
+% Cover Letter — Bhanu Prakash Bathini  (INTERN / ENTRY-LEVEL base template)
+% One page, letterpaper, pdflatex. Layout = the user's coverletter.tex (SAMPLE — replace with yours); the addressee block and body are tokenized.
+%
+% HOW THE PIPELINE USES THIS FILE
+%   render.py replaces only the <<TOKENS>> below and the four BODY paragraphs between
+%   the P1-OPENING ... P4-CLOSE comment markers. Keep those markers, the \cl* tokens
+%   and the "Sincerely" block exactly; change anything else freely.
+%   build_engine.py reads the four body paragraphs as the TRUE filler used when the
+%   model writes a paragraph that is too short — so keep them generic (no company
+%   names) and factual (only what the resume says).
+%------------------------------------------------------------------------------
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.72in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{parskip}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black
+}
+
+\setlength{\parskip}{0.55em}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% -----------------------------------------------------------------------------
+% TOKENS -- render.py replaces the values on the right. No underscores inside tokens.
+% -----------------------------------------------------------------------------
+\newcommand{\clDate}{September 26, 2026}
+\newcommand{\clHiringManager}{Hiring Manager}
+\newcommand{\clCompany}{Hadrian}
+\newcommand{\clCompanyAddr}{Los Angeles, CA}
+\newcommand{\clJobTitle}{Data Science/ Data Engineer Intern}
+\newcommand{\clHowFound}{Jobright}
+
+\begin{document}
+
+% ============================ HEADER (do not edit) ===========================
+\begin{minipage}[t]{0.62\textwidth}
+  {\large\bfseries Bhanu Prakash Bathini}\\[2pt]
+  {\small \clCompanyAddr\ \textbullet\ (000) 000-0000}\\
+  {\small \href{mailto:your.email@example.com}{your.email@example.com}}\\
+  {\small \href{https://your-portfolio.example.com}{Portfolio}
+    \textbullet\
+    \href{https://github.com/your-github}{GitHub}
+    \textbullet\
+    \href{https://huggingface.co/your-handle}{Hugging Face}}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.34\textwidth}
+  \raggedleft
+  {\small \clDate}
+\end{minipage}
+
+% ============================ LETTER META ====================================
+\vspace{0.85em}
+{\small
+\clHiringManager\\
+\clCompany\\
+\clCompanyAddr
+}
+
+\vspace{0.35em}
+{\small\textbf{Re:} \clJobTitle}
+
+\vspace{0.15em}
+Dear \clHiringManager,
+
+% ============================ BODY -- render.py rewrites these four blocks ====
+
+% P1 OPENING
+I am applying for the Data Science/Data Engineer Intern position at Hadrian, found through Jobright. I hold a Master of Science in Applied Computer Science from Northwest Missouri State University and have built production data pipelines, trained machine learning models, and delivered analytics that directly improved decision-making in fast-paced environments.
+
+% P2 PROOF
+At Mondee I built grounded document Q\&A on Azure AI Search and GPT-4o, cut hallucination escalations by 40\%, and raised groundedness scores by 35\% through structured logging and prompt engineering. I trained routing and classification models in PyTorch and scikit-learn that lifted accuracy by 18\%, reporting precision, recall, and error cases each sprint. At Cosmic Reality I developed PDF-to-structured-data pipelines in Python so thousands of malformed pages became consistent tables, and trained sentiment and time-series models in PyTorch and TensorFlow with MLflow experiment tracking.
+
+% P3 FIT
+I am proficient in Python and SQL and have hands-on experience with data pipelines, cloud data warehouses, and ETL workflows on Azure and AWS. I write clean, well-tested code, participate in code reviews, document setup steps, and surface data quality issues during every sprint. My background in statistics and machine learning lets me turn messy datasets into defensible conclusions, and I communicate analysis clearly to non-technical partners through dashboards and written reports.
+
+% P4 CLOSE
+Hadrian's mission to build autonomous factories for aerospace and defense through AI and advanced manufacturing is inspiring. I am excited to prototype statistical and machine learning solutions using real production data and contribute to factory performance reporting. I would welcome the opportunity to discuss how I can support your team. Thank you for your consideration.
+
+\vspace{0.7em}
+Sincerely,\\[0.35em]
+{\bfseries Bhanu Prakash Bathini}\\
+{\small (000) 000-0000 \textbullet\ \href{mailto:your.email@example.com}{your.email@example.com}}
+
+\end{document}

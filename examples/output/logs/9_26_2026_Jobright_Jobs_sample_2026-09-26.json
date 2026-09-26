@@ -1,0 +1,12 @@
+{
+ "file": "Jobright_Jobs_sample_2026-09-26.xlsx",
+ "day": "9_26_2026",
+ "jobs": 4,
+ "generated": 4,
+ "failed": [],
+ "model": "claude-sonnet-4-5-20250929",
+ "resume_pages": 1,
+ "minutes": 0.7,
+ "excel": "C:\\agentic_usecases\\intern-resume-coverletter-generator\\Input\\9_26_2026\\updated\\Jobright_Jobs_sample_2026-09-26_updated.xlsx",
+ "output_dir": "C:\\agentic_usecases\\intern-resume-coverletter-generator\\Output\\9_26_2026"
+}

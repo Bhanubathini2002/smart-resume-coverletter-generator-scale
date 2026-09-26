@@ -1,9 +1,14 @@
-# Intern / Entry-Level Resume & Cover Letter Generator
+# Smart Resume & Cover Letter Generator (Scale)
 
 Drop a spreadsheet of job postings in `Input/`, run one command, get a **tailored 1-page resume + 1-page
 cover letter PDF for every job**, plus the spreadsheet back with the file paths, the job description,
-the detected ATS and a mailing address. Built for internship, co-op, new-grad and junior applications:
-the model may reword and reorder, but it can never invent a tool, employer, metric or seniority.
+the detected ATS and a mailing address. Runs hundreds of postings in one go (parallel LLM + LaTeX workers,
+resumable, per-job folders). Tuned for internship, co-op, new-grad and junior applications: the model may
+reword and reorder, but it can never invent a tool, employer, metric or seniority.
+
+**See it before you run it:** [`examples/input/`](examples/input) is a real Jobright export (4 intern
+postings), [`examples/output/`](examples/output) is exactly what the run produced from it — the updated
+spreadsheet, and per job the resume PDF, cover letter PDF, the generated `.tex` files and `job.json`.
 
 ```
 Input/jobs.xlsx  ──►  run.py  ──►  Output/<day>/<Company>_<Title>/<Your_Name>.pdf
@@ -21,11 +26,31 @@ Input/jobs.xlsx  ──►  run.py  ──►  Output/<day>/<Company>_<Title>/<Y
    (keep the shapes listed below), then run `python engine/build_engine.py`.
 4. **Your city**: `Address/address_for_resume.xlsx` maps a job's city to a mailing address for application
    forms. Edit the `Houston, TX` row (or change `DEFAULT_CITY_ST` in `config.py`) to your own address.
-5. **Run**: put a jobs `.xlsx` in `Input/` (see `samples/jobs_sample_2026-09-26.xlsx`) and run
-   `run.bat` (Windows) or `./run.sh` (macOS/Linux).
+5. **Run**: put a jobs `.xlsx` in `Input/` (copy `examples/input/Jobright_Jobs_sample_2026-09-26.xlsx` to try it)
+   and run `run.bat` (Windows) or `./run.sh` (macOS/Linux).
 
 Re-running the same file is safe: finished jobs are skipped. `--redo` regenerates everything.
 `python run.py Input/jobs.xlsx --model gpt-4o-mini --workers 6` overrides the model / parallelism.
+
+## Examples (what goes in, what comes out)
+
+```
+examples/
+├── input/Jobright_Jobs_sample_2026-09-26.xlsx           ← a Jobright export, 4 intern rows, as scraped
+└── output/
+    ├── Input/9_26_2026/updated/…_updated.xlsx           ← same sheet + 5 columns: complete_address_section,
+    │                                                        updated_resume_section, jd, coverletter, ats
+    ├── Output_9_26_2026/<Company>_<Title>/               ← one folder per job
+    │   ├── Bhanu_Prakash_Bathini.pdf                    ← tailored 1-page resume
+    │   ├── Bhanu_Prakash_Bathini_Cover_Letter.pdf       ← tailored 1-page cover letter
+    │   ├── main.tex · coverletter.tex                   ← the LaTeX that was compiled (editable)
+    │   └── job.json                                     ← title, company, city, cached JD
+    └── logs/9_26_2026_….json                            ← run report (4/4 generated, 0.7 min)
+```
+Open the four resumes side by side to see the tailoring: the same base template, but coursework order,
+skills rows and bullets shift toward each posting (Data Science vs Software Engineer vs AI Engineer),
+while employers, dates, project names and numbers never change. Contact details in the examples are the
+sample template's placeholders.
 
 ## Input spreadsheet
 
@@ -101,7 +126,7 @@ engine/ats_detect.py          ATS / job-board detection
 engine/build_engine.py        templates → resume_template.tex, base_spec.json, fixed_facts.json, allowed_tech.json, cl_filler.json
 templates/                    base_resume.tex, base_coverletter.tex (samples — replace), ATS_prompt.md (reference)
 Address/address_for_resume.xlsx   city → mailing address book (edit the default row)
-samples/jobs_sample_2026-09-26.xlsx   input format
+examples/                     real input spreadsheet + the exact output it produced
 ```
 
 ## License
